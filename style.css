@@ -1,0 +1,27 @@
+.section {
+    background-color: rgb(90, 187, 90);
+    content: center;
+}
+
+#left-message-block {
+    float: left;
+    width: 25%;
+    height: 790px;
+}
+
+#center-card {
+    float: left;
+    width: 50%;
+}
+
+#right-message-block {
+    float: left;
+    width: 25%;
+    height: 790px;
+}
+
+#bottom-bar {
+    top:auto;
+}
+
+
