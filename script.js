@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    var ridbApiKey = "7771610e-244f-4e11-8ff0-59115fc17eb5";
-    var ridbQueryURL = "https://ridb.recreation.gov/api/v1/facilities?limit=50&offset=0&state=GA&activity=BOATING&sort=NAME&apikey=" + ridbApiKey;
+    // var ridbApiKey = "7771610e-244f-4e11-8ff0-59115fc17eb5";
+    // var ridbQueryURL = "https://ridb.recreation.gov/api/v1/facilities?limit=50&offset=0&state=GA&activity=BOATING&sort=NAME&apikey=" + ridbApiKey;
     const WeatherAPIKey = "5bb3a5739d78e8deccb5b36c764be06d";
     const storageInput = $(".storage");
     const storedInput = $("recent-searches");
@@ -60,6 +60,22 @@ $(document).ready(function () {
             `;
             //we convert the markup string into html then add it to the page
             $("#current-day").html(currentMarkUp);
+
+            //the hiking trails of 
+            console.log(res)
+            const lat =(res.coord.lat)
+            const lon =(res.coord.lon)
+            const hikingKey ="200971209-f8aa46e467071360508bc929af7dda47"
+            const hikingURL =`https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lon}&maxDistance=10&key=${hikingKey}`
+            $.ajax({
+                url: hikingURL,
+                method: "GET"
+            }).then(function (resHike) {
+                console.log(resHike)
+            });
+        
         });
+
+        
     }
 })
