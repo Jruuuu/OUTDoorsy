@@ -12,6 +12,14 @@ $(document).ready(function () {
         navbarMenu.toggleClass('is-active')
     });
 
+    // Modal
+
+    const modal = $(".modal");
+
+    $("#modal-button").on('click', function () {
+        modal.addClass('is-active')
+    })
+
 
     //On click of search button
     $("#search-button").on('click', function () {
