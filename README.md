@@ -1,12 +1,10 @@
 
-# ProjectBeen
 
-#Unit 7: Project 1
+# OUTDoorsy 
+## Date: November 14, 2020
 
-##Project Title: ProjectBeen - by Enrilo Ugalde, Jr., Enrique Gomez, Brett Winterstrom, and Nick Menotti ###Date: November 14, 2020
-
-###Table of Contents
-
+### Table of Contents
+---
 
 1. Project Description
 2. Installation
@@ -14,24 +12,31 @@
 4. Credits
 5. License  
 
-####1. Project Description Objective
+### 1. Project Description Objective
 
-
-####2. Installation Click on the link below to view the code for this project in GitHub: Link to GitHub Repository: https://github.com/Jruuuu/ProjectBeen.git
-
+---
+### 2. Installation Click on the link below to view the code for this project in GitHub: Link to GitHub Repository: https://github.com/Jruuuu/ProjectBeen.git
+---
 Click on the link below to view the deployed URL for this project: Link to GitHub Pages Published url: https://jruuuu.github.io/ProjectBeen/
 
-####3. Credits Special thanks to the following:
 
-MomentJS: https://momentjs.com/
+#### 3. Credits Special thanks to the following:
+
+BULMA: https://bulma.io/
 
 Bootstrap: https://getbootstrap.com/
 
+Hiking API: https://www.hikingproject.com/
+
+OpenWeather API: https://openweathermap.org/api
+
 Tutorials: https://www.w3schools.com/
 
-Contributors: Enrilo Ugalde, Jr., Enrique Gomez, Brett Winterstrom, and Nick Menotti
+## Contributors:
 
-####4. License MIT License Copyright (c) [2020] [Nickolas Menotti] Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ Brett Winterstrom, Enrilo Ugalde, Jr., Enrique Gomez,  and Nick Menotti
+
+#### 4. License MIT License Copyright (c) [2020] [Nickolas Menotti] Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
