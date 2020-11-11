@@ -6,11 +6,12 @@
 
 ###Table of Contents
 
-Project Description
-Installation
-Usage
-Credits
-License  
+1. Project Description
+2. Installation
+3. Usage
+4. Credits
+5. License  
+
 ####1. Project Description Objective
 
 ####2. Installation Click on the link below to view the code for this project in GitHub: Link to GitHub Repository: https://github.com/Jruuuu/ProjectBeen.git
