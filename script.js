@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $("#modal-button").on('click', function () {
         modal.addClass('is-active')
-    })
+    });
 
 
     //On click of search button
@@ -71,20 +71,20 @@ $(document).ready(function () {
 
             //the hiking trails of 
             console.log(res)
-            const lat =(res.coord.lat)
-            const lon =(res.coord.lon)
-            const hikingKey ="200971209-f8aa46e467071360508bc929af7dda47"
-            const hikingURL =`https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lon}&maxDistance=10&key=${hikingKey}`
+            const lat = (res.coord.lat)
+            const lon = (res.coord.lon)
+            const hikingKey = "200971209-f8aa46e467071360508bc929af7dda47"
+            const hikingURL = `https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lon}&maxDistance=10&key=${hikingKey}`
             $.ajax({
                 url: hikingURL,
                 method: "GET"
             }).then(function (resHike) {
                 console.log(resHike)
             });
-        
+
         });
 
-        
+
     }
 
 })
