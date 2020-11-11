@@ -1,3 +1,4 @@
+
 # ProjectBeen
 
 #Unit 7: Project 1
@@ -6,6 +7,7 @@
 
 ###Table of Contents
 
+
 1. Project Description
 2. Installation
 3. Usage
@@ -13,6 +15,7 @@
 5. License  
 
 ####1. Project Description Objective
+
 
 ####2. Installation Click on the link below to view the code for this project in GitHub: Link to GitHub Repository: https://github.com/Jruuuu/ProjectBeen.git
 
@@ -32,4 +35,6 @@ Contributors: Enrilo Ugalde, Jr., Enrique Gomez, Brett Winterstrom, and Nick Men
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
