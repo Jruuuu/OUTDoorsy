@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $("#modal-button").on('click', function () {
         modal.addClass('is-active')
-    })
+    });
 
 
     //On click of search button
