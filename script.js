@@ -79,7 +79,20 @@ $(document).ready(function () {
                 url: hikingURL,
                 method: "GET"
             }).then(function (resHike) {
-                console.log(resHike)
+                console.log(resHike);
+                //trails buttons for loop the length of trails array in hike
+                let trailsMarkUp ="";
+
+                for (let i = 0; i < resHike.trails.length; i++) {
+                    trailsMarkUp+=
+                    `
+                       <button class="button is-success is-hovered">${resHike.trails[i].name}</button>
+                    <br>
+                    `;
+                    $(".left-message-body").html(trailsMarkUp);
+                    
+                    
+                }
             });
 
         });
