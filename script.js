@@ -91,12 +91,26 @@ $(document).ready(function () {
                 for (let i = 0; i < resHike.trails.length; i++) {
                     trailsMarkUp+=
                     `
-                       <button class="button is-success is-hovered">${resHike.trails[i].name}</button>
+                       <button class="destination button is-success is-hovered">${resHike.trails[i].name}</button>
                     <br>
                     `;
                     $(".left-message-body").html(trailsMarkUp);
                     
                     
+                }
+                var destinations = $(".destination");
+                for (i = 0; i < destinations.length; i++) {
+                    destinations[i].addEventListener("click", function(event) {
+                        console.log(resHike.trails)
+                        for (j = 0; j < resHike.trails.length; j++) {
+                            if (event.target.textContent === resHike.trails[j].name) {
+                                $(".title").text(resHike.trails[j].name);
+                                $(".subtitle").text(resHike.trails[j].location);
+                                $("#summary").text(resHike.trails[j].summary);
+                                $("#main-img").attr("src", resHike.trails[j].imgMedium);
+                            }
+                        }
+                    })
                 }
             });
 
