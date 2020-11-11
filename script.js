@@ -14,10 +14,15 @@ $(document).ready(function () {
 
     // Modal
     const modal = $(".modal");
+    const modalBg = $(".modal-background")
 
     $("#modal-button").on('click', function () {
-        modal.addClass('is-active')
+        modal.addClass('is-active');
     });
+
+    modalBg.on('click', function () {
+        modal.removeClass('is-active')
+    })
 
 
     //On click of search button
@@ -61,7 +66,7 @@ $(document).ready(function () {
                         <span>(${new Date().toLocaleDateString()})</span>
                         <span><img src="http://openweathermap.org/img/w/${res.weather[0].icon}.png"/></span>
                     </h2>
-                    <p>Temperature: ${res.main.temp}F</p>
+                    <p>Temperature: ${Math.round(((parseInt(res.main.temp) - 273.15) * (9/5) + 32) * 10) / 10}\u00B0F</p>
                     <p>Humidity: ${res.main.humidity}%</p>
                     <p>Wind Speed: ${res.wind.speed}MPH</p>
                 </div>
