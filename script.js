@@ -13,7 +13,6 @@ $(document).ready(function () {
     });
 
     // Modal
-
     const modal = $(".modal");
 
     $("#modal-button").on('click', function () {
@@ -31,6 +30,7 @@ $(document).ready(function () {
         const saveToLocalStorage = function () {
             localStorage.setItem('textinput', JSON.stringify(userInput))
         };
+
 
         saveToLocalStorage();
 
@@ -70,4 +70,6 @@ $(document).ready(function () {
             $("#current-day").html(currentMarkUp);
         });
     }
+
 })
+
