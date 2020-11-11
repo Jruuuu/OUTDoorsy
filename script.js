@@ -14,10 +14,15 @@ $(document).ready(function () {
 
     // Modal
     const modal = $(".modal");
+    const modalBg = $(".modal-background")
 
     $("#modal-button").on('click', function () {
-        modal.addClass('is-active')
+        modal.addClass('is-active');
     });
+
+    modalBg.on('click', function () {
+        modal.removeClass('is-active')
+    })
 
 
     //On click of search button
