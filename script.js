@@ -5,6 +5,13 @@ $(document).ready(function () {
     const storageInput = $(".storage");
     const storedInput = $("recent-searches");
 
+    // On click of burger menu
+    const navbarMenu = $("#nav-links")
+
+    $("#burger-button").on('click', function () {
+        navbarMenu.toggleClass('is-active')
+    });
+
 
     //On click of search button
     $("#search-button").on('click', function () {
