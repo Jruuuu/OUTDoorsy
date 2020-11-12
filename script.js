@@ -27,6 +27,7 @@ $(document).ready(function () {
 
     //On click of search button
     $("#search-button").on('click', function () {
+
         //get users input cityName
         const userInput = $("#search-text").val();
         //show all weather data
@@ -57,6 +58,12 @@ $(document).ready(function () {
         }).then(function (res) {
             console.log("current weather: ", res);
 
+            // update map with city
+            options = {
+                center: { lat: res.coord.lat, lng: res.coord.lon},
+                zoom: 10
+            }
+            initMap()
             //write the markup which is a string
             const currentMarkUp =
                 `
@@ -110,7 +117,11 @@ $(document).ready(function () {
                                 $(".difficulty").text("Difficulty: "+ resHike.trails[j].difficulty);
                                 $(".distance").text("Miles: " + resHike.trails[j].length);                             
                                 $("#main-img").attr("src", resHike.trails[j].imgMedium);
-
+                                options = {
+                                    center: { lat: resHike.trails[j].latitude, lng: resHike.trails[j].longitude},
+                                    zoom: 20
+                                }
+                                initMap()
                             }
                         }
                     })
@@ -126,10 +137,10 @@ $(document).ready(function () {
 // Google Map API //
 let map;
 
+var options = {
+    center: { lat: 32.745732, lng: -117.174944 }, 
+    zoom: 10,    
+}
 function initMap() {
-    var options = {
-        center: { lat: 32.745732, lng: -117.174944 }, 
-        zoom: 8,    
-    }
   var map = new google.maps.Map(document.getElementById('map'), options);
 }
