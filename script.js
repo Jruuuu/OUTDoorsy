@@ -107,7 +107,10 @@ $(document).ready(function () {
                                 $(".title").text(resHike.trails[j].name);
                                 $(".subtitle").text(resHike.trails[j].location);
                                 $("#summary").text(resHike.trails[j].summary);
+                                $(".difficulty").text("Difficulty: "+ resHike.trails[j].difficulty);
+                                $(".distance").text("Miles: " + resHike.trails[j].length);                             
                                 $("#main-img").attr("src", resHike.trails[j].imgMedium);
+
                             }
                         }
                     })
