@@ -39,13 +39,13 @@
       </a>
 
 
-      
+
     </div>
   </nav>
   <!--This is a colored message block - WARNING-->
   <article id="left-message-block" class="message is-dark">
     <div class="message-header">
-      <p>Destinations</p>
+      <p>Trails Near Destination</p>
     </div>
     <!--Modal button-->
     <!-- <div>
@@ -68,7 +68,9 @@
   <div id="center-card" class="card">
     <div class="card-image">
       <figure class="image is-4by3">
-        <img id="main-img" src="https://www.uncovercolorado.com/wp-content/uploads/2017/10/Eldorado-Canyon-Hiking-Trail-Boulder-1280x720.jpg" alt="Placeholder image">
+        <img id="main-img"
+          src="https://www.uncovercolorado.com/wp-content/uploads/2017/10/Eldorado-Canyon-Hiking-Trail-Boulder-1280x720.jpg"
+          alt="Placeholder image">
       </figure>
     </div>
     <div class="card-content">
@@ -80,12 +82,15 @@
       </div>
       <div class="content">
         <h4>Summary</h4>
-        <p id="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-        </head>p>
-        <a href="#">#css</a> <a href="#">#responsive</a>
+        <p id="summary">Summary of Hike</p>
         <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        <div class="difficulty"></div>
+        <div class="distance"></div>
+
+        </head>
+        <!-- <a href="#">#css</a> <a href="#">#responsive</a> -->
+        <br>
+        <!-- <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time> -->
       </div>
     </div>
   </div>
@@ -94,7 +99,7 @@
     <div class="message-header">
       <p>Today's Local Weather</p>
     </div>
-    <input id="search-text" type="text">
+    <input id="search-text" type="text" placeholder="Search City Here">
     <button id="search-button" type="button" class="btn btn-primary rounded">search</button>
     <div id="current-day" class="message">
 
@@ -108,7 +113,7 @@
   <!--This is a colored message block - DARK-->
   <article id="bottom-bar" class="message is-dark">
     <div class="message-header">
-      <p>Destination Description</p>
+      Destination Directions
     </div>
     <div class="message-body">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
