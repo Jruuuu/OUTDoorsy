@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     })
     const getWeatherData = (cityName) => {
-        const userChoiceURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${WeatherAPIKey}`;
+        const userChoiceURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${WeatherAPIKey}`;
         //Pull Current Day data from weather api
         $.ajax({
             url: userChoiceURL,
@@ -64,7 +64,7 @@ $(document).ready(function () {
                     <h2>
                         <span>${res.name}</span>
                         <span>(${new Date().toLocaleDateString()})</span>
-                        <span><img src="http://openweathermap.org/img/w/${res.weather[0].icon}.png"/></span>
+                        <span><img src="https://openweathermap.org/img/w/${res.weather[0].icon}.png"/></span>
                     </h2>
                     <p>Temperature: ${Math.round(((parseInt(res.main.temp) - 273.15) * (9/5) + 32) * 10) / 10}\u00B0F</p>
                     <p>Humidity: ${res.main.humidity}%</p>
