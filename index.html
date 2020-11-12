@@ -39,194 +39,18 @@
       </a>
 
 
-      <!--Navbar-burger button-->
-      <!-- <a id="burger-button" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-        data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div id="nav-links" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-        <div class="pt-3 mb-0">
-          <form class="is-hoverable">
-            <fieldset>
-              <p>
-                <select class="navbar-item has-dropdown">
-                  <option class="navbar-item">
-                    Select a Location
-                  </option>
-                  <option class="navbar-item">
-                    Alabama
-                  </option>
-                  <option class="navbar-item">
-                    Alaska
-                  </option>
-                  <option class="navbar-item">
-                    Arizona
-                  </option>
-                  <option class="navbar-item">
-                    Arkansas
-                  </option>
-                  <option class="navbar-item">
-                    California
-                  </option>
-                  <option class="navbar-item">
-                    Colorado
-                  </option>
-                  <option class="navbar-item">
-                    Connecticut
-                  </option>
-                  <option class="navbar-item">
-                    Delaware
-                  </option>
-                  <option class="navbar-item">
-                    Florida
-                  </option>
-                  <option class="navbar-item">
-                    Georgia
-                  </option>
-                  <option class="navbar-item">
-                    Hawaii
-                  </option>
-                  <option class="navbar-item">
-                    Idaho
-                  </option>
-                  <option class="navbar-item">
-                    Illinois
-                  </option>
-                  <option class="navbar-item">
-                    Indiana
-                  </option>
-                  <option class="navbar-item">
-                    Iowa
-                  </option>
-                  <option class="navbar-item">
-                    Kanas
-                  </option>
-                  <option class="navbar-item">
-                    Kentucky
-                  </option>
-                  <option class="navbar-item">
-                    Louisiana
-                  </option>
-                  <option class="navbar-item">
-                    Maine
-                  </option>
-                  <option class="navbar-item">
-                    Maryland
-                  </option>
-                  <option class="navbar-item">
-                    Massachusetts
-                  </option>
-                  <option class="navbar-item">
-                    Michigan
-                  </option>
-                  <option class="navbar-item">
-                    Minnesota
-                  </option>
-                  <option class="navbar-item">
-                    Mississippi
-                  </option>
-                  <option class="navbar-item">
-                    Missouri
-                  </option>
-                  <option class="navbar-item">
-                    Montana
-                  </option>
-                  <option class="navbar-item">
-                    Nebraska
-                  </option>
-                  <option class="navbar-item">
-                    Nevada
-                  </option>
-                  <option class="navbar-item">
-                    New Hampshire
-                  </option>
-                  <option class="navbar-item">
-                    New Jersey
-                  </option>
-                  <option class="navbar-item">
-                    New Mexico
-                  </option>
-                  <option class="navbar-item">
-                    New York
-                  </option>
-                  <option class="navbar-item">
-                    North Carolina
-                  </option>
-                  <option class="navbar-item">
-                    North Dakota
-                  </option>
-                  <option class="navbar-item">
-                    Ohio
-                  </option>
-                  <option class="navbar-item">
-                    Oklahoma
-                  </option>
-                  <option class="navbar-item">
-                    Oregon
-                  </option>
-                  <option class="navbar-item">
-                    Pennsylvania
-                  </option>
-                  <option class="navbar-item">
-                    Rhode Island
-                  </option>
-                  <option class="navbar-item">
-                    South Carolina
-                  </option>
-                  <option class="navbar-item">
-                    South Dakota
-                  </option>
-                  <option class="navbar-item">
-                    Tennessee
-                  </option>
-                  <option class="navbar-item">
-                    Texas
-                  </option>
-                  <option class="navbar-item">
-                    Utah
-                  </option>
-                  <option class="navbar-item">
-                    Vermont
-                  </option>
-                  <option class="navbar-item">
-                    Virginia
-                  </option>
-                  <option class="navbar-item">
-                    Washington
-                  </option>
-                  <option class="navbar-item">
-                    West Virginia
-                  </option>
-                  <option class="navbar-item">
-                    Wisconsin
-                  </option>
-                  <option class="navbar-item">
-                    Wyoming
-                  </option>
-                </select>
-              </p>
-            </fieldset>
-          </form>
-        </div>
-      </div> -->
+
     </div>
   </nav>
   <!--This is a colored message block - WARNING-->
   <article id="left-message-block" class="message is-dark">
     <div class="message-header">
-      <p>Destinations</p>
+      <p>Trails Near Destination</p>
     </div>
     <!--Modal button-->
-    <div>
+    <!-- <div>
       <button id="modal-button" type="button" class="btn btn-primary rounded">Modal Button</button>
-    </div>
+    </div> -->
 
     <div class="left-message-body">
 
@@ -244,7 +68,9 @@
   <div id="center-card" class="card">
     <div class="card-image">
       <figure class="image is-4by3">
-        <img src="https://www.uncovercolorado.com/wp-content/uploads/2017/10/Eldorado-Canyon-Hiking-Trail-Boulder-1280x720.jpg" alt="Placeholder image">
+        <img id="main-img"
+          src="https://www.uncovercolorado.com/wp-content/uploads/2017/10/Eldorado-Canyon-Hiking-Trail-Boulder-1280x720.jpg"
+          alt="Placeholder image">
       </figure>
     </div>
     <div class="card-content">
@@ -255,11 +81,16 @@
         </div>
       </div>
       <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-        <a href="#">#css</a> <a href="#">#responsive</a>
+        <h4>Summary</h4>
+        <p id="summary">Summary of Hike</p>
         <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        <div class="difficulty"></div>
+        <div class="distance"></div>
+
+        </head>
+        <!-- <a href="#">#css</a> <a href="#">#responsive</a> -->
+        <br>
+        <!-- <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time> -->
       </div>
     </div>
   </div>
@@ -268,7 +99,7 @@
     <div class="message-header">
       <p>Today's Local Weather</p>
     </div>
-    <input id="search-text" type="text">
+    <input id="search-text" type="text" placeholder="Search City Here">
     <button id="search-button" type="button" class="btn btn-primary rounded">search</button>
     <div id="current-day" class="message">
 
@@ -282,7 +113,7 @@
   <!--This is a colored message block - DARK-->
   <article id="bottom-bar" class="message is-dark">
     <div class="message-header">
-      <p>Destination Description</p>
+      Destination Directions
     </div>
     <div class="message-body">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis

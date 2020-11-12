@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     })
     const getWeatherData = (cityName) => {
-        const userChoiceURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${WeatherAPIKey}`;
+        const userChoiceURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${WeatherAPIKey}`;
         //Pull Current Day data from weather api
         $.ajax({
             url: userChoiceURL,
@@ -64,7 +64,7 @@ $(document).ready(function () {
                     <h2>
                         <span>${res.name}</span>
                         <span>(${new Date().toLocaleDateString()})</span>
-                        <span><img src="http://openweathermap.org/img/w/${res.weather[0].icon}.png"/></span>
+                        <span><img src="https://openweathermap.org/img/w/${res.weather[0].icon}.png"/></span>
                     </h2>
                     <p>Temperature: ${Math.round(((parseInt(res.main.temp) - 273.15) * (9/5) + 32) * 10) / 10}\u00B0F</p>
                     <p>Humidity: ${res.main.humidity}%</p>
@@ -91,12 +91,29 @@ $(document).ready(function () {
                 for (let i = 0; i < resHike.trails.length; i++) {
                     trailsMarkUp+=
                     `
-                       <button class="button is-success is-hovered">${resHike.trails[i].name}</button>
+                       <button class="destination button is-success is-hovered">${resHike.trails[i].name}</button>
                     <br>
                     `;
                     $(".left-message-body").html(trailsMarkUp);
                     
                     
+                }
+                var destinations = $(".destination");
+                for (i = 0; i < destinations.length; i++) {
+                    destinations[i].addEventListener("click", function(event) {
+                        console.log(resHike.trails)
+                        for (j = 0; j < resHike.trails.length; j++) {
+                            if (event.target.textContent === resHike.trails[j].name) {
+                                $(".title").text(resHike.trails[j].name);
+                                $(".subtitle").text(resHike.trails[j].location);
+                                $("#summary").text(resHike.trails[j].summary);
+                                $(".difficulty").text("Difficulty: "+ resHike.trails[j].difficulty);
+                                $(".distance").text("Miles: " + resHike.trails[j].length);                             
+                                $("#main-img").attr("src", resHike.trails[j].imgMedium);
+
+                            }
+                        }
+                    })
                 }
             });
 
