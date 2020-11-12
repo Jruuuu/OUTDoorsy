@@ -123,4 +123,13 @@ $(document).ready(function () {
     }
 
 })
+// Google Map API //
+let map;
 
+function initMap() {
+    var options = {
+        center: { lat: 32.745732, lng: -117.174944 }, 
+        zoom: 8,    
+    }
+  var map = new google.maps.Map(document.getElementById('map'), options);
+}

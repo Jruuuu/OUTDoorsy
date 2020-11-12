@@ -25,6 +25,14 @@
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <!--link style.css-->
     <link rel="stylesheet" href="style.css">
+
+    <!--MAP API LINKS, Source: https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYer88WSaYvGRDw1TNuqdtugHDU7bnQEs&callback=initMap">
+    </script>
+  
   </head>
 
 <body>
@@ -111,16 +119,17 @@
   </article>
 
   <!--This is a colored message block - DARK-->
-  <article id="bottom-bar" class="message is-dark">
+  <article id="bottom-bar" class="message is-Dark">
     <div class="message-header">
-      Destination Directions
+      Directions
     </div>
     <div class="message-body">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
-      placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-      <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-      sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem
-      eget, facilisis sodales sem.
+      <p>
+
+      <!--Make a div to hold the Google Map-->
+      <div id="map"></div>
+
+      </p>
     </div>
   </article>
 
@@ -132,7 +141,6 @@
       <h3 class="title mb-6">This is a modal</h3>
     </div>
   </div>
-
 
   <!--link to jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
