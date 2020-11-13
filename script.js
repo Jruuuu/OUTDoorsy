@@ -2,34 +2,38 @@ $(document).ready(function () {
     // var ridbApiKey = "7771610e-244f-4e11-8ff0-59115fc17eb5";
     // var ridbQueryURL = "https://ridb.recreation.gov/api/v1/facilities?limit=50&offset=0&state=GA&activity=BOATING&sort=NAME&apikey=" + ridbApiKey;
     const WeatherAPIKey = "5bb3a5739d78e8deccb5b36c764be06d";
-    let searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
+    let searchHistory = JSON.parse(localStorage.getItem("textinput"));
 
     if (searchHistory === null) {
         searchHistory = [];
+    }  else {
+        for (var i = 0; i < searchHistory.length; i++) {
+            //create button template
+            let btnMarkUp = `<button class="recent-search btn btn-dark rounded" "cityname="${searchHistory[i]}">${searchHistory[i]}</button><br>`;
+            //add button to container for btns
+            $("#recent-searches").append(btnMarkUp);
+        }
     }
 
 
     //On click of search button
     $("#search-button").on('click', function () {
-
         //get users input cityName
         const userInput = $("#search-text").val();
         //show all weather data
         getWeatherData(userInput);
+
         searchHistory.push(userInput);
         localStorage.setItem('textinput', JSON.stringify(searchHistory));
 
-
-        for (let i = 0; i < searchHistory.length; i++) {
-            //create button template
-            let btnMarkUp = `<button class="destination button is-success is-hovered" "cityname="${searchHistory[i]}">${searchHistory[i]}</button>`;
-            //add button to container for btns
-            $("#recent-searches").html(btnMarkUp);
-            //add event listener to it
-            $(`[cityname="${searchHistory[i]}]"`).on("click", getWeatherData(searchHistory[i]));
-
-        }
-
+        //create button template
+        let btnMarkUp = `<button class="recent-search destination button is-success is-hovered" "cityname="${userInput}">${userInput}</button><br>`;
+        //add button to container for btns
+        $("#recent-searches").append(btnMarkUp);
+        //add event listener to it
+        $(".recent-search").on("click", function(event) {
+                getWeatherData(event.target.textContent);
+        });
     })
     const getWeatherData = (cityName) => {
         const userChoiceURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${WeatherAPIKey}`;
@@ -80,7 +84,7 @@ $(document).ready(function () {
                 for (let i = 0; i < resHike.trails.length; i++) {
                     trailsMarkUp +=
                         `
-                       <button class="destination button is-success is-hovered">${resHike.trails[i].name}</button>
+                       <button class="destination button is-success is-focused is-fullwidth">${resHike.trails[i].name}</button>
                     <br>
                     `;
                     $(".left-message-body").html(trailsMarkUp);
