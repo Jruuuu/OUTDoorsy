@@ -13,6 +13,9 @@ $(document).ready(function () {
             //add button to container for btns
             $("#recent-searches").append(btnMarkUp);
         }
+        $(".recent-search").on("click", function (event) {
+            getWeatherData(event.target.textContent);
+        });
     }
 
 
