@@ -9,19 +9,6 @@ $(document).ready(function () {
     }
 
 
-    // Modal
-    const modal = $(".modal");
-    const modalBg = $(".modal-background")
-
-    $("#modal-button").on('click', function () {
-        modal.addClass('is-active');
-    });
-
-    modalBg.on('click', function () {
-        modal.removeClass('is-active')
-    })
-
-
     //On click of search button
     $("#search-button").on('click', function () {
 
@@ -35,7 +22,7 @@ $(document).ready(function () {
 
         for (let i = 0; i < searchHistory.length; i++) {
             //create button template
-            let btnMarkUp = `<button class="btn btn-dark rounded" "cityname="${searchHistory[i]}">${searchHistory[i]}</button>`;
+            let btnMarkUp = `<button class="destination button is-success is-hovered" "cityname="${searchHistory[i]}">${searchHistory[i]}</button>`;
             //add button to container for btns
             $("#recent-searches").html(btnMarkUp);
             //add event listener to it
@@ -64,8 +51,8 @@ $(document).ready(function () {
                 `
                 <div id="current-day" class="border rounded">
                     <h2>
-                        <span>${res.name}</span>
-                        <span>(${new Date().toLocaleDateString()})</span>
+                        <h1 class= "is-size-3"><span>${res.name}</span></h1>
+                        <h1 class= "is-size-4"><span>(${new Date().toLocaleDateString()})</span></h1>
                         <span><img src="https://openweathermap.org/img/w/${res.weather[0].icon}.png"/></span>
                     </h2>
                     <p>Temperature: ${Math.round(((parseInt(res.main.temp) - 273.15) * (9 / 5) + 32) * 10) / 10}\u00B0F</p>
