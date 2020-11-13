@@ -28,11 +28,11 @@
 
     <!--MAP API LINKS, Source: https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-   
+
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYer88WSaYvGRDw1TNuqdtugHDU7bnQEs&callback=initMap">
-    </script>
-  
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYer88WSaYvGRDw1TNuqdtugHDU7bnQEs&callback=initMap">
+      </script>
+
   </head>
 
 <body>
@@ -51,8 +51,8 @@
     </div>
   </nav>
   <!--This is a colored message block - WARNING-->
-  <article id="left-message-block" class="message is-dark">
-    <div class="message-header">
+  <article id="left-message-block" class="message is-dark ">
+    <div class="message-header ">
       <p>Trails Near Destination</p>
     </div>
     <!--Modal button-->
@@ -73,7 +73,7 @@
     </div>
   </article>
   <!--This is a Card with Image, Header and Text-->
-  <div id="center-card" class="card">
+  <div id="center-card" class="card has-text-centered">
     <div class="card-image">
       <figure class="image is-4by3">
         <img id="main-img"
@@ -103,16 +103,19 @@
     </div>
   </div>
   <!--This is a colored message block - DANGER-->
-  <article id="right-message-block" class="message is-dark">
-    <div class="message-header">
-      <p>Today's Local Weather</p>
+  <article id="right-message-block" class="message is-dark has-text-centered">
+    <div class="message-header has-text-centered">
+      <p class="has-text-centered">Today's Local Weather</p>
     </div>
+    <br>
     <input id="search-text" type="text" placeholder="Search City Here">
+    <br>
+    <br>
     <button id="search-button" type="button" class="btn btn-primary rounded">search</button>
     <div id="current-day" class="message">
 
     </div>
-    <h6>Most Recent Search</h6>
+    <h6 class="has-text-centered">Most Recent Search</h6>
     <div id="recent-searches">
 
     </div>
@@ -126,16 +129,22 @@
     <div class="message-body">
       <p>
 
-      <!--Make a div to hold the Google Map-->
+        <!--Make a div to hold the Google Map-->
       <div id="map"></div>
 
       </p>
     </div>
   </article>
 
+  <footer class="footer py-1">
+    <div class="content has-text-centered">
+      <img src="assets/images/OUTDoorsy- logo2(2).png" style="max-height: 60px">
+      <p>Copyright 2020 Outdoorsy</p>
+    </div>
+  </footer>
 
   <!--MODAL-->
-  <div class="modal">
+  <div class=" modal">
     <div class="modal-background"></div>
     <div class="modal-content has-background-white py-5 px-5">
       <h3 class="title mb-6">This is a modal</h3>
