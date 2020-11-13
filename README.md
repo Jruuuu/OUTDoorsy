@@ -17,7 +17,7 @@
 
 Link to GitHub Repository: <https://github.com/Jruuuu/ProjectBeen.git>
 
-Link to GitHub Pages Published url: <https://jruuuu.github.io/ProjectBeen>
+Link to GitHub Pages Published url: <https://jruuuu.github.io/OUTDoorsy>
 
 #### 3. Credits Special thanks to the following
 
