@@ -6,10 +6,10 @@ $(document).ready(function () {
 
     if (searchHistory === null) {
         searchHistory = [];
-    }  else {
+    } else {
         for (var i = 0; i < searchHistory.length; i++) {
             //create button template
-            let btnMarkUp = `<button class="recent-search destination button is-success is-hovered" "cityname="${searchHistory[i]}">${searchHistory[i]}</button><br>`;
+            let btnMarkUp = `<button class="recent-search destination button is-success is-fullwidth is-outlined" "cityname="${searchHistory[i]}">${searchHistory[i]}</button><br>`;
             //add button to container for btns
             $("#recent-searches").append(btnMarkUp);
         }
@@ -27,12 +27,12 @@ $(document).ready(function () {
         localStorage.setItem('textinput', JSON.stringify(searchHistory));
 
         //create button template
-        let btnMarkUp = `<button class="recent-search destination button is-success is-hovered" "cityname="${userInput}">${userInput}</button><br>`;
+        let btnMarkUp = `<button class="recent-search destination button is-success is-fullwidth is-outlined" "cityname="${userInput}">${userInput}</button><br>`;
         //add button to container for btns
         $("#recent-searches").append(btnMarkUp);
         //add event listener to it
-        $(".recent-search").on("click", function(event) {
-                getWeatherData(event.target.textContent);
+        $(".recent-search").on("click", function (event) {
+            getWeatherData(event.target.textContent);
         });
     })
     const getWeatherData = (cityName) => {
@@ -84,7 +84,7 @@ $(document).ready(function () {
                 for (let i = 0; i < resHike.trails.length; i++) {
                     trailsMarkUp +=
                         `
-                       <button class="destination button is-success is-focused is-fullwidth">${resHike.trails[i].name}</button>
+                       <button class="destination button is-success is-outlined is-fullwidth">${resHike.trails[i].name}</button>
                     <br>
                     `;
                     $(".left-message-body").html(trailsMarkUp);
