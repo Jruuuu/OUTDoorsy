@@ -114,7 +114,7 @@ $(document).ready(function () {
                                 $("#main-img").attr("src", resHike.trails[j].imgMedium);
                                 options = {
                                     center: { lat: resHike.trails[j].latitude, lng: resHike.trails[j].longitude },
-                                    zoom: 20
+                                    zoom: 10
                                 }
                                 initMap()
                             }
