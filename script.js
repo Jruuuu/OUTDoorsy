@@ -16,19 +16,6 @@ $(document).ready(function () {
     }
 
 
-    // Modal
-    const modal = $(".modal");
-    const modalBg = $(".modal-background")
-
-    $("#modal-button").on('click', function () {
-        modal.addClass('is-active');
-    });
-
-    modalBg.on('click', function () {
-        modal.removeClass('is-active')
-    })
-
-
     //On click of search button
     $("#search-button").on('click', function () {
         //get users input cityName
@@ -39,8 +26,6 @@ $(document).ready(function () {
         searchHistory.push(userInput);
         localStorage.setItem('textinput', JSON.stringify(searchHistory));
 
-
-
         //create button template
         let btnMarkUp = `<button class="recent-search destination button is-success is-hovered" "cityname="${userInput}">${userInput}</button><br>`;
         //add button to container for btns
@@ -49,9 +34,6 @@ $(document).ready(function () {
         $(".recent-search").on("click", function(event) {
                 getWeatherData(event.target.textContent);
         });
-
-        
-
     })
     const getWeatherData = (cityName) => {
         const userChoiceURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${WeatherAPIKey}`;
@@ -73,8 +55,8 @@ $(document).ready(function () {
                 `
                 <div id="current-day" class="border rounded">
                     <h2>
-                        <span>${res.name}</span>
-                        <span>(${new Date().toLocaleDateString()})</span>
+                        <h1 class= "is-size-3"><span>${res.name}</span></h1>
+                        <h1 class= "is-size-4"><span>(${new Date().toLocaleDateString()})</span></h1>
                         <span><img src="https://openweathermap.org/img/w/${res.weather[0].icon}.png"/></span>
                     </h2>
                     <p>Temperature: ${Math.round(((parseInt(res.main.temp) - 273.15) * (9 / 5) + 32) * 10) / 10}\u00B0F</p>
@@ -102,7 +84,7 @@ $(document).ready(function () {
                 for (let i = 0; i < resHike.trails.length; i++) {
                     trailsMarkUp +=
                         `
-                       <button class="destination button is-success is-hovered">${resHike.trails[i].name}</button>
+                       <button class="destination button is-success is-focused is-fullwidth">${resHike.trails[i].name}</button>
                     <br>
                     `;
                     $(".left-message-body").html(trailsMarkUp);
