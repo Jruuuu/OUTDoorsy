@@ -9,7 +9,7 @@ $(document).ready(function () {
     }  else {
         for (var i = 0; i < searchHistory.length; i++) {
             //create button template
-            let btnMarkUp = `<button class="recent-search btn btn-dark rounded" "cityname="${searchHistory[i]}">${searchHistory[i]}</button><br>`;
+            let btnMarkUp = `<button class="recent-search destination button is-success is-hovered" "cityname="${searchHistory[i]}">${searchHistory[i]}</button><br>`;
             //add button to container for btns
             $("#recent-searches").append(btnMarkUp);
         }
