@@ -9,19 +9,6 @@ $(document).ready(function () {
     }
 
 
-    // Modal
-    const modal = $(".modal");
-    const modalBg = $(".modal-background")
-
-    $("#modal-button").on('click', function () {
-        modal.addClass('is-active');
-    });
-
-    modalBg.on('click', function () {
-        modal.removeClass('is-active')
-    })
-
-
     //On click of search button
     $("#search-button").on('click', function () {
 
@@ -35,7 +22,7 @@ $(document).ready(function () {
 
         for (let i = 0; i < searchHistory.length; i++) {
             //create button template
-            let btnMarkUp = `<button class="btn btn-dark rounded" "cityname="${searchHistory[i]}">${searchHistory[i]}</button>`;
+            let btnMarkUp = `<button class="destination button is-success is-hovered" "cityname="${searchHistory[i]}">${searchHistory[i]}</button>`;
             //add button to container for btns
             $("#recent-searches").html(btnMarkUp);
             //add event listener to it
