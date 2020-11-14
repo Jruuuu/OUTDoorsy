@@ -134,12 +134,12 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), options);
 }
 
-if (screen.width < 769) {
-    var destinationDiv = $("#left").html();
+if (screen.width <= 768) {
+    var destinationsDiv = $("#left").html();
     var searchDiv = $("#right").html();
     var descriptionDiv = $("#middle").html();
 
-    $("#left").html(searchDiv);
-    $("#middle").html(destinationDiv);
-    $("#right").html(descriptionDiv);
+    $("#left").html(descriptionDiv);
+    $("#middle").html(searchDiv);
+    $("#right").html(destinationsDiv);
 }
