@@ -13,6 +13,13 @@
 
 ### 1. Project Description Objective
 
+The objective of the OUTDoorsy project was to create a useful tool for outdoor enthusiasts to scout out hiking trails and local conditions in and around various cities.  By searching the name of a city, the user will find a list of ten possible hiking trail adventures near that city, complete with local weather conditions, and an interactive google map that points them to the trail head so they may begin their journey.
+In the “Today’s Local Weather” section, when a user searches a city by name in the search bar, and clicks on the search button, the current weather conditions are populated in the area below the search bar. The weather dashboard shows local weather conditions including today’s date, current temperature in degrees Fahrenheit, humidity, wind speed, and an icon indicating sunny, partly cloudy, rainy, snow, etc. so the user can decide what to plan to dress appropriately for their adventure, or whether to go at all on days with inclement weather. The city name search will also produce a button with that city’s name and maintain a list of historical searched cities in the space below the search bar for future reference. When the city name button is clicked, the “Trails Near Destination” section will populate with ten buttons of the names of trails in and around that city name. The user may then click on any one of the buttons in list of trails to view the summary of the trail in the center card on the page. The center card will display an image of the trail (if available), the trail name, city and state where the trail is located, a brief description of the hiking experience to expect, along with a level of difficulty, and the length of the hike in tenths of a mile increments.
+When the trail is selected and it displays the details in the center trail information card, the “Map to Trailhead” will update to show the location of the selected trail using a Google map so that the user may find where the trail starts, and view the terrain, and trail route along with key points of interest for related outdoor activities such as camping, golfing, etc. OUTDoorsy is the place to find your next ultimate outdoor adventure. See you on the trail!
+
+![Example of how the OUTDoorsy should look when finished.] <assets/images/OUTDoorsy_site_example_top.jpg> <assets/images/OUTDoorsy_site_example_bottom.jpg>
+
+
 ### 2. Installation Click on the link below to view the code for this project in GitHub
 
 Link to GitHub Repository: <https://github.com/Jruuuu/ProjectBeen.git>
