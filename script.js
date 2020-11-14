@@ -133,3 +133,13 @@ var options = {
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), options);
 }
+
+if (screen.width < 769) {
+    var destinationDiv = $("#left").html();
+    var searchDiv = $("#right").html();
+    var descriptionDiv = $("#middle").html();
+
+    $("#left").html(searchDiv);
+    $("#middle").html(destinationDiv);
+    $("#right").html(descriptionDiv);
+}
